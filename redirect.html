@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Aura Glow...</title>
+    <style>
+        body { background: #EFE9E3; font-family: 'Poppins', sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; }
+        .box { padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 80%; max-width: 400px; }
+        .btn { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: block; margin-top: 20px; }
+        .back { color: #888; text-decoration: none; font-size: 0.8rem; display: block; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./AURA GLOW LOGO .jpg" style="width: 80px; border-radius: 50%;">
+        <h3>Opening Instagram App</h3>
+        <p>If the app doesn't open automatically, click the button below:</p>
+        <a href="instagram://user?username=_.aura_glow" class="btn" id="openBtn">OPEN APP NOW</a>
+        <a href="index.html" class="back">← Back to Shop</a>
+    </div>
+
+    <script>
+        const instaApp = "instagram://user?username=_.aura_glow";
+        const instaWeb = "https://www.instagram.com/_.aura_glow/";
+
+        // Try to trigger the app immediately
+        window.location.href = instaApp;
+
+        // If user is still here after 2 seconds, update button to web link
+        setTimeout(() => {
+            document.getElementById('openBtn').href = instaWeb;
+        }, 2000);
+    </script>
+</body>
+</html>
